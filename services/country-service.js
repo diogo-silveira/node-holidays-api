@@ -6,7 +6,7 @@ const countryService = () => new Promise((resolve, reject) => {
     countryApi = new CountryApi();
     request.get(countryApi.availableCountries, async (err, body) => {
         if(err) { 
-          await  reject(err); 
+          await reject(err); 
         } else { 
           await resolve(body); 
         }

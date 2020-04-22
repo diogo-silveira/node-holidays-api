@@ -2,12 +2,9 @@ const express = require('express'),
       app = express(),
       port = process.env.port || 3000,
       router = express.Router(),
-      { country } = require('./domain/models'),
-      { routes } = require('./domain/routes'),
-      { CountryApi } = require('./domain/country-api-endpoints'),
-      { countryService } = require('./services/country-service');
+      { country, routes, countryService } = require('./domain/domain');      
 
-console.log(new Date());
+console.log(routes);
 
 router.route(routes.countries)
     .get((req,res) => {
